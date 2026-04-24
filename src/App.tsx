@@ -5,6 +5,7 @@ import AddIssueModal from './components/AddIssueModal';
 import IssueDetailsModal from './components/IssueDetailsModal';
 import { useIssueStorage } from './hooks/useIssueStorage';
 import { Issue } from './types/index';
+import logo from './assets/download.png';
 
 function App() {
   const { issues, addIssue, updateIssue, deleteIssue } = useIssueStorage();
@@ -40,7 +41,22 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
             <div>
-              <h1 className="text-3xl font-bold text-gray-900">ELV Site Issue Tracker</h1>
+              <div className="flex items-center gap-3">
+  <img
+    src={logo}
+    alt="ELV Logo"
+    className="w-10 h-10 object-contain rounded-md"
+  />
+
+  <div>
+    <h1 className="text-3xl font-bold text-gray-900 leading-tight">
+      ELV Site Issue Tracker
+    </h1>
+    <p className="text-gray-600 text-sm mt-1">
+      ICAD Ocenarium Project
+    </p>
+  </div>
+</div>
               <p className="text-gray-600 text-sm mt-1">ICAD Ocenarium Project</p>
             </div>
             <button
